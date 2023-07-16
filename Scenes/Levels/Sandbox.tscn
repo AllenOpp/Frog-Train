@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2n71i05tgy5n"]
+
+[ext_resource type="Texture2D" uid="uid://dd367ucl7wkm5" path="res://Textures/greybox_texture.png" id="1_o48j3"]
+[ext_resource type="PackedScene" uid="uid://cd1dqi8ou55fr" path="res://Scenes/Characters/Player.tscn" id="2_01bxj"]
+[ext_resource type="PackedScene" uid="uid://77p1euydfy2" path="res://Scenes/Characters/NPC.tscn" id="3_o165c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdm1j"]
+albedo_texture = ExtResource("1_o48j3")
+
+[sub_resource type="Environment" id="Environment_c83dj"]
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Sandbox" type="Node3D"]
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+material_override = SubResource("StandardMaterial3D_cdm1j")
+use_collision = true
+size = Vector3(30, 1, 30)
+
+[node name="Pillar" type="CSGBox3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2, 0)
+use_collision = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c83dj")
+
+[node name="Player" parent="." instance=ExtResource("2_01bxj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 5)
+
+[node name="NPC" parent="." instance=ExtResource("3_o165c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18944, 0.5, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 25.1498, 0)
+shadow_enabled = true
