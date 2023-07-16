@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://3megdtc1lmhm"]
+
+[ext_resource type="Script" path="res://Scenes/UI/new_pause.gd" id="1_we41l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfxud"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.25098)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="New_Pause" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_we41l")
+
+[node name="Overlay" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hfxud")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 161.0
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Rows" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="MarginContainer/Rows"]
+layout_mode = 2
+text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Resume" type="Button" parent="MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="Main_Menu" type="Button" parent="MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/Rows/CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/Rows/CenterContainer/VBoxContainer/Main_Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/Rows/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

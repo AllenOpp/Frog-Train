@@ -1,7 +1,15 @@
 extends Character
 
+#variables
 @onready var playerCamera = $Camera3D
 @onready var ray = $Camera3D/RayCast3D
+
+const pauseMenu := "res://Scenes/UI/new_pause.tscn"
+
+
+#signals
+signal touch(object)
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -27,18 +35,33 @@ func inputUpdate(delta):
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
 	
-		# Handle Interact with raycast.
+
+#Handle Mouse input to camera rotation
+func _unhandled_input(event):
+	
+	if event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * .005)
+		playerCamera.rotate_x(-event.relative.y * .005)
+		playerCamera.rotation.x = clamp(playerCamera.rotation.x, -PI/2, PI/2)
+
+			# Handle Interact with raycast.
 	if Input.is_action_just_pressed("interact"):
+		#jardo
+		interact()
+		
+		# doof
 		ray.force_raycast_update()
 		if ray.is_colliding():
 			var collider = ray.get_collider()
 			if collider.has_method("_on_interact"):
 				collider._on_interact()
+		
+	if Input.is_action_pressed("escape"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		var pauseInstance = preload(pauseMenu).instantiate()
+		add_child(pauseInstance)
 
-#Handle Mouse input to camera rotation
-func _unhandled_input(event):
-	
-		if event is InputEventMouseMotion:
-			rotate_y(-event.relative.x * .005)
-			playerCamera.rotate_x(-event.relative.y * .005)
-			playerCamera.rotation.x = clamp(playerCamera.rotation.x, -PI/2, PI/2)
+
+func interact():
+	#print("touching ", ray.get_collider())
+	touch.emit(ray.get_collider())
