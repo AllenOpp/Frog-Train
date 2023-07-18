@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bubywx1t4jecu"]
+
+[ext_resource type="PackedScene" uid="uid://dqadv13t8r0h0" path="res://Scenes/Props/Lights/lamp_01.glb" id="1_7k6wj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u1cqe"]
+size = Vector3(1, 1.93752, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3fr8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8s0ts"]
+material = SubResource("StandardMaterial3D_r3fr8")
+
+[node name="lamp_01" instance=ExtResource("1_7k6wj")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_u1cqe")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.5606, 0)
+light_energy = 5.0
+spot_angle = 43.6809
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(0.165, 0, 0, 0, 0.165, 0, 0, 0, 0.165, 0.0052433, 1.95698, -0.0881682)
+mesh = SubResource("CapsuleMesh_8s0ts")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MeshInstance3D" index="0"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+omni_range = 0.594358
