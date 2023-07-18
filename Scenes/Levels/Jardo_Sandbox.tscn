@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dp14d006yu6lg"]
+[gd_scene load_steps=10 format=3 uid="uid://dp14d006yu6lg"]
 
 [ext_resource type="Texture2D" uid="uid://dd367ucl7wkm5" path="res://Textures/greybox_texture.png" id="1_w2tmw"]
 [ext_resource type="PackedScene" uid="uid://cd1dqi8ou55fr" path="res://Scenes/Characters/Player.tscn" id="2_sav56"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://chac5w4by3vxg" path="res://Scenes/Props/Chairs/train_seat.tscn" id="4_715sj"]
 [ext_resource type="PackedScene" uid="uid://cbqgc4ob1p3yg" path="res://Scenes/Props/Tables/tables.tscn" id="5_0bbns"]
 [ext_resource type="PackedScene" uid="uid://bubywx1t4jecu" path="res://Scenes/Props/Lights/lamp_01.tscn" id="6_cu5fi"]
+[ext_resource type="PackedScene" uid="uid://dd3rssvjkost3" path="res://Scenes/Props/Lights/lamp_02.tscn" id="7_ackxu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdm1j"]
 albedo_texture = ExtResource("1_w2tmw")
@@ -24,8 +25,9 @@ use_collision = true
 size = Vector3(30, 1, 30)
 
 [node name="Pillar" type="CSGBox3D" parent="Blocks"]
-transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 5, 0, 8.74228e-08, 0, -1, 3.35371, 2, 0.0561364)
 use_collision = true
+size = Vector3(0.457793, 1, 0.625361)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_c83dj")
@@ -42,10 +44,41 @@ visible = false
 shadow_enabled = true
 
 [node name="train_seat" parent="." instance=ExtResource("4_715sj")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 3.15671, -0.515818, 7.96209)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 5.15671, -0.515818, -5.06631)
+
+[node name="train_seat2" parent="." instance=ExtResource("4_715sj")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 5.15671, -0.515818, -4.58218)
+
+[node name="train_seat7" parent="." instance=ExtResource("4_715sj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.86647, -0.515818, -5.06631)
+
+[node name="train_seat8" parent="." instance=ExtResource("4_715sj")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 7.86647, -0.515818, -4.58218)
+
+[node name="train_seat3" parent="." instance=ExtResource("4_715sj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 5.15671, -0.515818, -0.21223)
+
+[node name="train_seat4" parent="." instance=ExtResource("4_715sj")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 5.15671, -0.515818, 0.271902)
+
+[node name="train_seat5" parent="." instance=ExtResource("4_715sj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.77928, -0.515818, -0.21223)
+
+[node name="train_seat6" parent="." instance=ExtResource("4_715sj")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 7.77928, -0.515818, 0.271902)
 
 [node name="table" parent="." instance=ExtResource("5_0bbns")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 6.34006, -0.510326, 6.21814)
+transform = Transform3D(0.332, 0, 0, 0, 0.332, 0, 0, 0, 0.332, 7.46125, -0.510326, -2.41357)
 
 [node name="lamp_01" parent="." instance=ExtResource("6_cu5fi")]
-transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 1.05449, 1.17038, 0.0561364)
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 2.57883, 1.17038, 4.65661e-08)
+
+[node name="Pillar2" type="CSGBox3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 5, 0, 8.74228e-08, 0, -1, 3.35371, 2, -4.8351)
+use_collision = true
+
+[node name="lamp_03" parent="." instance=ExtResource("6_cu5fi")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 2.29922, 1.17038, -4.89123)
+
+[node name="lamp_02" parent="." instance=ExtResource("7_ackxu")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.39812, 0.300455, -2.3998)
