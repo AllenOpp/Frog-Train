@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd3rssvjkost3"]
+
+[ext_resource type="PackedScene" uid="uid://d3j53rw7bn81g" path="res://Scenes/Props/Lights/lamp_02.glb" id="1_nhkss"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_412nx"]
+radius = 1.0
+
+[node name="lamp_02" instance=ExtResource("1_nhkss")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("CylinderShape3D_412nx")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82277, 0)
+omni_range = 0.644234
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0)
+light_energy = 5.0
