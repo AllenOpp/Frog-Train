@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxe7vd4yenmmr"
-path="res://.godot/imported/seamless_carpet_texture.png-f2964de5eecd828ad265f692ad6dd260.ctex"
+uid="uid://6mfaolu0isa"
+path="res://.godot/imported/rails.png-5b96638a724ab967a0f2b8386ac0e575.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/seamless_carpet_texture.png"
-dest_files=["res://.godot/imported/seamless_carpet_texture.png-f2964de5eecd828ad265f692ad6dd260.ctex"]
+source_file="res://Textures/rails.png"
+dest_files=["res://.godot/imported/rails.png-5b96638a724ab967a0f2b8386ac0e575.ctex"]
 
 [params]
 
