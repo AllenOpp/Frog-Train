@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1f7daqiohtcf"]
+
+[ext_resource type="PackedScene" uid="uid://cwcv00ngeih83" path="res://Scenes/Characters/Rusty_Charleston/cody_v1.glb" id="1_8yc18"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_paweh"]
+animation = &"03_smoking_standing"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5xbu6"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cajby"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_qbmqu"]
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_i52in"]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_4431i"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_0bsj8"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_cajby")
+nodes/Animation/position = Vector2(80, 140)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_paweh")
+"nodes/Animation 2/position" = Vector2(197, 323)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_5xbu6")
+"nodes/Animation 3/position" = Vector2(611, 450)
+nodes/Blend2/node = SubResource("AnimationNodeBlend2_qbmqu")
+nodes/Blend2/position = Vector2(600, 100)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_i52in")
+nodes/OneShot/position = Vector2(820, 140)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_4431i")
+nodes/TimeScale/position = Vector2(320, 140)
+nodes/output/position = Vector2(1060, 100)
+node_connections = [&"output", 0, &"OneShot", &"Blend2", 0, &"TimeScale", &"Blend2", 1, &"Animation 2", &"TimeScale", 0, &"Animation", &"OneShot", 0, &"Blend2", &"OneShot", 1, &"Animation 3"]
+
+[node name="cody_v1" instance=ExtResource("1_8yc18")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(2.7235e-20, 0.989645, 4.83695e-09)
+bones/0/rotation = Quaternion(-0.024465, 2.12102e-19, 2.12102e-19, 0.999701)
+bones/1/rotation = Quaternion(0.211981, -0.000734421, -0.0047153, 0.977262)
+bones/2/rotation = Quaternion(-0.0138268, -0.0252333, 0.977532, -0.208813)
+bones/5/rotation = Quaternion(0.0485908, 0.162555, 0.981611, -0.0874871)
+bones/5/scale = Vector3(1.00007, 1, 1.00002)
+bones/6/rotation = Quaternion(-0.37215, 0.000100094, -0.0463157, 0.927016)
+bones/7/rotation = Quaternion(0.720037, 0.062936, 0.00997482, 0.691004)
+bones/7/scale = Vector3(1.00002, 1, 1)
+bones/8/rotation = Quaternion(0.0155387, -0.0281348, 0.98336, 0.178801)
+bones/11/rotation = Quaternion(-0.0566219, 0.162621, 0.980976, 0.0896309)
+bones/11/scale = Vector3(1.00007, 1, 1.00002)
+bones/12/rotation = Quaternion(-0.37215, -0.0001001, 0.0463156, 0.927016)
+bones/13/rotation = Quaternion(0.719683, -0.0703441, -0.00617938, 0.690702)
+bones/13/scale = Vector3(1.00002, 1, 1)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeBlendTree_0bsj8")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/Blend2/blend_amount = 1.0
+parameters/OneShot/active = true
+parameters/OneShot/request = 0
+parameters/TimeScale/scale = 1.0
