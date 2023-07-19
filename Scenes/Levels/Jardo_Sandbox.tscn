@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=13 format=3 uid="uid://dp14d006yu6lg"]
 =======
 [gd_scene load_steps=10 format=3 uid="uid://dp14d006yu6lg"]
 >>>>>>> 40e68bd (lamp 2, and organizing my sandbox scene)
+=======
+[gd_scene load_steps=14 format=3 uid="uid://dp14d006yu6lg"]
+>>>>>>> 3b8aebc (ciggies and cody)
 
 [ext_resource type="Texture2D" uid="uid://dd367ucl7wkm5" path="res://Textures/greybox_texture.png" id="1_w2tmw"]
 [ext_resource type="PackedScene" uid="uid://cd1dqi8ou55fr" path="res://Scenes/Characters/Player.tscn" id="2_sav56"]
@@ -15,8 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://dhceqyqsdj2mc" path="res://Scenes/Props/Misc/martini.tscn" id="8_y30g8"]
 [ext_resource type="PackedScene" uid="uid://boqmwk5ptaqpd" path="res://Scenes/Props/Misc/wine.tscn" id="9_r1kw0"]
 [ext_resource type="PackedScene" uid="uid://crgrqtcv6u1i8" path="res://Scenes/Props/Misc/ashtray_with_cigar.tscn" id="10_g2rkk"]
+<<<<<<< HEAD
 =======
 >>>>>>> 40e68bd (lamp 2, and organizing my sandbox scene)
+=======
+[ext_resource type="PackedScene" uid="uid://d1f7daqiohtcf" path="res://Scenes/Characters/Rusty_Charleston/cody_v_1.tscn" id="11_8iuvs"]
+>>>>>>> 3b8aebc (ciggies and cody)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdm1j"]
 albedo_texture = ExtResource("1_w2tmw")
@@ -108,5 +116,11 @@ transform = Transform3D(0.411, 0, 0, 0, 0.411, 0, 0, 0, 0.411, 2.21902, 0.281609
 
 [node name="ashtray" parent="." instance=ExtResource("10_g2rkk")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.14087, -0.0375142, -4.52724)
+<<<<<<< HEAD
 =======
 >>>>>>> 40e68bd (lamp 2, and organizing my sandbox scene)
+=======
+
+[node name="cody_v1" parent="." instance=ExtResource("11_8iuvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74673, -0.508893, 1.64593)
+>>>>>>> 3b8aebc (ciggies and cody)
