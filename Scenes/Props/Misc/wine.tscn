@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://boqmwk5ptaqpd"]
+
+[ext_resource type="PackedScene" uid="uid://bw6epvu0ubkxt" path="res://Scenes/Props/Misc/wine.glb" id="1_2spar"]
+
+[node name="wine" instance=ExtResource("1_2spar")]

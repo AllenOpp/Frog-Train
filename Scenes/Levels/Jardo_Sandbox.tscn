@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dp14d006yu6lg"]
+[gd_scene load_steps=13 format=3 uid="uid://dp14d006yu6lg"]
 
 [ext_resource type="Texture2D" uid="uid://dd367ucl7wkm5" path="res://Textures/greybox_texture.png" id="1_w2tmw"]
 [ext_resource type="PackedScene" uid="uid://cd1dqi8ou55fr" path="res://Scenes/Characters/Player.tscn" id="2_sav56"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cbqgc4ob1p3yg" path="res://Scenes/Props/Tables/tables.tscn" id="5_0bbns"]
 [ext_resource type="PackedScene" uid="uid://bubywx1t4jecu" path="res://Scenes/Props/Lights/lamp_01.tscn" id="6_cu5fi"]
 [ext_resource type="PackedScene" uid="uid://dd3rssvjkost3" path="res://Scenes/Props/Lights/lamp_02.tscn" id="7_ackxu"]
+[ext_resource type="PackedScene" uid="uid://dhceqyqsdj2mc" path="res://Scenes/Props/Misc/martini.tscn" id="8_y30g8"]
+[ext_resource type="PackedScene" uid="uid://boqmwk5ptaqpd" path="res://Scenes/Props/Misc/wine.tscn" id="9_r1kw0"]
+[ext_resource type="PackedScene" uid="uid://crgrqtcv6u1i8" path="res://Scenes/Props/Misc/ashtray_with_cigar.tscn" id="10_g2rkk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdm1j"]
 albedo_texture = ExtResource("1_w2tmw")
@@ -70,6 +73,9 @@ transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.2
 [node name="table" parent="." instance=ExtResource("5_0bbns")]
 transform = Transform3D(0.332, 0, 0, 0, 0.332, 0, 0, 0, 0.332, 7.46125, -0.510326, -2.41357)
 
+[node name="table2" parent="." instance=ExtResource("5_0bbns")]
+transform = Transform3D(0.332, 0, 0, 0, 0.332, 0, 0, 0, 0.332, 2.29785, -0.510326, -4.7193)
+
 [node name="lamp_01" parent="." instance=ExtResource("6_cu5fi")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 2.57883, 1.17038, 4.65661e-08)
 
@@ -82,3 +88,12 @@ transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 
 
 [node name="lamp_02" parent="." instance=ExtResource("7_ackxu")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.39812, 0.300455, -2.3998)
+
+[node name="martini" parent="." instance=ExtResource("8_y30g8")]
+transform = Transform3D(0.448, 0, 0, 0, 0.448, 0, 0, 0, 0.448, 2.43777, 0.239816, -4.66285)
+
+[node name="wine" parent="." instance=ExtResource("9_r1kw0")]
+transform = Transform3D(0.411, 0, 0, 0, 0.411, 0, 0, 0, 0.411, 2.21902, 0.281609, -4.8265)
+
+[node name="ashtray" parent="." instance=ExtResource("10_g2rkk")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.14087, -0.0375142, -4.52724)
