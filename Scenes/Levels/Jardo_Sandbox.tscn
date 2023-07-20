@@ -61,6 +61,7 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 visible = false
 shadow_enabled = true
 
+<<<<<<< HEAD
 [node name="train_seat" parent="." instance=ExtResource("4_715sj")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 5.15671, -0.515818, -5.06631)
 
@@ -97,25 +98,70 @@ transform = Transform3D(0.332, 0, 0, 0, 0.332, 0, 0, 0, 0.332, 2.29785, -0.51032
 [node name="lamp_01" parent="." instance=ExtResource("6_cu5fi")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 2.57883, 1.17038, 4.65661e-08)
 
+=======
+>>>>>>> 9d783a8 (textures and state)
 [node name="Pillar2" type="CSGBox3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 5, 0, 8.74228e-08, 0, -1, 3.35371, 2, -4.8351)
 use_collision = true
 
-[node name="lamp_03" parent="." instance=ExtResource("6_cu5fi")]
+[node name="cody_v1" parent="." instance=ExtResource("11_8iuvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05644, -0.492633, 2.23675)
+
+[node name="Seats" type="Node3D" parent="."]
+
+[node name="train_seat" parent="Seats" instance=ExtResource("4_715sj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 5.15671, -0.515818, -5.06631)
+
+[node name="train_seat2" parent="Seats" instance=ExtResource("4_715sj")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 5.15671, -0.515818, -4.58218)
+
+[node name="train_seat7" parent="Seats" instance=ExtResource("4_715sj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.86647, -0.515818, -5.06631)
+
+[node name="train_seat8" parent="Seats" instance=ExtResource("4_715sj")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 7.86647, -0.515818, -4.58218)
+
+[node name="train_seat3" parent="Seats" instance=ExtResource("4_715sj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 5.15671, -0.515818, -0.21223)
+
+[node name="train_seat4" parent="Seats" instance=ExtResource("4_715sj")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 5.15671, -0.515818, 0.271902)
+
+[node name="train_seat5" parent="Seats" instance=ExtResource("4_715sj")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.77928, -0.515818, -0.21223)
+
+[node name="train_seat6" parent="Seats" instance=ExtResource("4_715sj")]
+transform = Transform3D(-0.25, 0, -2.18557e-08, 0, 0.25, 0, 2.18557e-08, 0, -0.25, 7.77928, -0.515818, 0.271902)
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="lamp_03" parent="Lights" instance=ExtResource("6_cu5fi")]
 transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 2.29922, 1.17038, -4.89123)
 
-[node name="lamp_02" parent="." instance=ExtResource("7_ackxu")]
+[node name="lamp_02" parent="Lights" instance=ExtResource("7_ackxu")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.39812, 0.300455, -2.3998)
 <<<<<<< HEAD
 
-[node name="martini" parent="." instance=ExtResource("8_y30g8")]
+[node name="lamp_01" parent="Lights" instance=ExtResource("6_cu5fi")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 2.57883, 1.17038, 4.65661e-08)
+
+[node name="Misc_Props" type="Node3D" parent="."]
+
+[node name="table" parent="Misc_Props" instance=ExtResource("5_0bbns")]
+transform = Transform3D(0.332, 0, 0, 0, 0.332, 0, 0, 0, 0.332, 7.46125, -0.510326, -2.41357)
+
+[node name="table2" parent="Misc_Props" instance=ExtResource("5_0bbns")]
+transform = Transform3D(0.332, 0, 0, 0, 0.332, 0, 0, 0, 0.332, 2.29785, -0.510326, -4.7193)
+
+[node name="martini" parent="Misc_Props" instance=ExtResource("8_y30g8")]
 transform = Transform3D(0.448, 0, 0, 0, 0.448, 0, 0, 0, 0.448, 2.43777, 0.239816, -4.66285)
 
-[node name="wine" parent="." instance=ExtResource("9_r1kw0")]
+[node name="wine" parent="Misc_Props" instance=ExtResource("9_r1kw0")]
 transform = Transform3D(0.411, 0, 0, 0, 0.411, 0, 0, 0, 0.411, 2.21902, 0.281609, -4.8265)
 
-[node name="ashtray" parent="." instance=ExtResource("10_g2rkk")]
+[node name="ashtray" parent="Misc_Props" instance=ExtResource("10_g2rkk")]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.14087, -0.0375142, -4.52724)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 40e68bd (lamp 2, and organizing my sandbox scene)
@@ -124,3 +170,5 @@ transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.14087, -0.0375142,
 [node name="cody_v1" parent="." instance=ExtResource("11_8iuvs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74673, -0.508893, 1.64593)
 >>>>>>> 3b8aebc (ciggies and cody)
+=======
+>>>>>>> 9d783a8 (textures and state)
