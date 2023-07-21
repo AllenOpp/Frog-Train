@@ -86,7 +86,6 @@ func _ready() -> void:
 	response_template.hide()
 	balloon.hide()
 	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x
-
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
 
@@ -100,7 +99,6 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	temporary_game_states = extra_game_states
 	is_waiting_for_input = false
 	resource = dialogue_resource
-
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
 
 

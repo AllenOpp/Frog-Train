@@ -31,7 +31,7 @@ func Update(delta: float):
 func Physics_Update(delta):
 	if not npc.is_on_floor():
 		npc.velocity.y -= gravity * delta
-	var direction = player.global_position - npc.global_position
+	#dvar direction = player.global_position - npc.global_position
 
 #	if direction.length() < 7:
 #		Transitioned.emit(self, "Follow")

@@ -6,10 +6,6 @@ extends Character
 
 const pauseMenu := "res://Scenes/UI/new_pause.tscn"
 
-
-#signals
-signal touch(object)
-
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -46,10 +42,6 @@ func _unhandled_input(event):
 
 			# Handle Interact with raycast.
 	if Input.is_action_just_pressed("interact"):
-		#jardo
-		interact()
-		
-		# doof
 		ray.force_raycast_update()
 		if ray.is_colliding():
 			var collider = ray.get_collider()
@@ -60,8 +52,3 @@ func _unhandled_input(event):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		var pauseInstance = preload(pauseMenu).instantiate()
 		add_child(pauseInstance)
-
-
-func interact():
-	print("touching ", ray.get_collider())
-	touch.emit(ray.get_collider())

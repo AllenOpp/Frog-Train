@@ -108,7 +108,9 @@ func type_next(delta: float, seconds_needed: float) -> void:
 		if visible_characters <= get_total_character_count():
 			spoke.emit(get_parsed_text()[visible_characters - 1], visible_characters - 1, get_speed(visible_characters))
 		# See if there's time to type out some more in this frame
+		print(seconds_per_step)
 		seconds_needed += seconds_per_step * (1.0 / get_speed(visible_characters))
+		print(seconds_per_step)
 		if seconds_needed > delta:
 			waiting_seconds += seconds_needed
 		else:
@@ -132,6 +134,7 @@ func get_speed(at_index: int) -> float:
 
 # Run any mutations at the current typing position
 func mutate_inline_mutations(index: int) -> void:
+	print("meow")
 	for inline_mutation in dialogue_line.inline_mutations:
 		# inline mutations are an array of arrays in the form of [character index, resolvable function]
 		if inline_mutation[0] > index:
