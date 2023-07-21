@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-#const main_menu := "res://scenes/assets_only/main_menu/main_menu.tscn"
+const main_menu := "res://Scenes/Levels/Sandbox.tscn"
 #const loading := "res://scenes/assets_only/loading/loading.tscn"
 
 func _ready():
@@ -16,4 +16,4 @@ func _on_quit_pressed():
 
 func _on_main_menu_pressed():
 	get_tree().paused = false
-	#get_tree().change_scene_to_file(main_menu)
+	get_tree().change_scene_to_file(main_menu)

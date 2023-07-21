@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2n71i05tgy5n"]
+[gd_scene load_steps=7 format=3 uid="uid://c2n71i05tgy5n"]
 
+[ext_resource type="Script" path="res://Scripts/game_state.gd" id="1_fkeuf"]
 [ext_resource type="Texture2D" uid="uid://dd367ucl7wkm5" path="res://Textures/greybox_texture.png" id="1_o48j3"]
 [ext_resource type="PackedScene" uid="uid://cd1dqi8ou55fr" path="res://Scenes/Characters/Player.tscn" id="2_01bxj"]
 [ext_resource type="PackedScene" uid="uid://77p1euydfy2" path="res://Scenes/Characters/NPC.tscn" id="3_o165c"]
@@ -11,6 +12,7 @@ albedo_texture = ExtResource("1_o48j3")
 ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="Sandbox" type="Node3D"]
+script = ExtResource("1_fkeuf")
 
 [node name="Blocks" type="Node3D" parent="."]
 
