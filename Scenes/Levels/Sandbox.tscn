@@ -1,17 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://c2n71i05tgy5n"]
+[gd_scene load_steps=18 format=3 uid="uid://c2n71i05tgy5n"]
 
 [ext_resource type="Script" path="res://Scripts/game_state.gd" id="1_fkeuf"]
-[ext_resource type="Texture2D" uid="uid://dd367ucl7wkm5" path="res://Textures/greybox_texture.png" id="1_o48j3"]
 [ext_resource type="PackedScene" uid="uid://cd1dqi8ou55fr" path="res://Scenes/Characters/Player.tscn" id="2_01bxj"]
 [ext_resource type="PackedScene" uid="uid://77p1euydfy2" path="res://Scenes/Characters/NPC.tscn" id="3_o165c"]
-[ext_resource type="Texture2D" uid="uid://dd367ucl7wkm5" path="res://textures/greybox_texture.png" id="5_i5cja"]
-[ext_resource type="Texture2D" uid="uid://cqf51h6cwmop1" path="res://textures/seamless_carpet_texture_256.png" id="6_kmftg"]
-[ext_resource type="Texture2D" uid="uid://dw64ab36vf12s" path="res://textures/dark_wood_02_256.jpg" id="7_rg7af"]
-[ext_resource type="Texture2D" uid="uid://14aoog1e57x3" path="res://textures/darker_wood_01_256.jpg" id="8_l578g"]
-[ext_resource type="Texture2D" uid="uid://ddeiq6a6hrtb2" path="res://textures/dark_wood_01_256.jpg" id="9_chl64"]
+[ext_resource type="Texture2D" uid="uid://dd367ucl7wkm5" path="res://Textures/greybox_texture.png" id="5_i5cja"]
+[ext_resource type="Texture2D" uid="uid://cqf51h6cwmop1" path="res://Textures/seamless_carpet_texture_256.png" id="6_kmftg"]
+[ext_resource type="Texture2D" uid="uid://dw64ab36vf12s" path="res://Textures/dark_wood_02_256.jpg" id="7_rg7af"]
+[ext_resource type="Texture2D" uid="uid://14aoog1e57x3" path="res://Textures/darker_wood_01_256.jpg" id="8_l578g"]
+[ext_resource type="Texture2D" uid="uid://ddeiq6a6hrtb2" path="res://Textures/dark_wood_01_256.jpg" id="9_chl64"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdm1j"]
-albedo_texture = ExtResource("1_o48j3")
+albedo_texture = ExtResource("5_i5cja")
 
 [sub_resource type="Environment" id="Environment_c83dj"]
 ambient_light_color = Color(1, 1, 1, 1)

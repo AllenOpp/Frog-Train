@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfk08i8rcss7t"
+path="res://.godot/imported/1950s Jazz Cellar Mix (Radio).wav-74b6d6a74c9a0de679bfd413b0f044cb.sample"
+
+[deps]
+
+source_file="res://Audio/Music/1950s Jazz Cellar Mix (Radio).wav"
+dest_files=["res://.godot/imported/1950s Jazz Cellar Mix (Radio).wav-74b6d6a74c9a0de679bfd413b0f044cb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
