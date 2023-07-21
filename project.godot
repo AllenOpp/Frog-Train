@@ -18,10 +18,15 @@ config/icon="res://Textures/icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+GameState="*res://Scripts/game_state.gd"
+
+[dialogue_manager]
+
+general/states=["GameState"]
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/tbloader/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/tbloader/plugin.cfg")
 
 [input]
 
@@ -71,4 +76,4 @@ escape={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Scripts/blue_man.dialogue", "res://Resources/blue_man.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Scripts/blue_man.dialogue", "res://Resource/Dialogue/blue_man.dialogue")
