@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://btun8ae0tw26r"
+path="res://.godot/imported/blue_man.dialogue-d50f686471cad06c227a4c8eb9792591.tres"
+
+[deps]
+
+source_file="res://Resources/blue_man.dialogue"
+dest_files=["res://.godot/imported/blue_man.dialogue-d50f686471cad06c227a4c8eb9792591.tres"]
+
+[params]
+
+defaults=true
