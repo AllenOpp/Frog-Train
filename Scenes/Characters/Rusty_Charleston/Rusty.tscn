@@ -79,6 +79,7 @@ bind/13/bone = -1
 bind/13/pose = Transform3D(-0.991506, 0.127402, -0.0253212, -0.06709, -0.335581, 0.939611, 0.111219, 0.933356, 0.341286, -0.182378, 0.0798671, -0.0332942)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [sub_resource type="Animation" id="Animation_jsmjx"]
 resource_name = "default"
@@ -492,6 +493,8 @@ tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, 0.104762, 0.0232825, 0.0920987, 0.98995)
 
 >>>>>>> 35b395a (lots of shit)
+=======
+>>>>>>> 9c2bfce (working dialogue and state machines)
 [sub_resource type="Animation" id="Animation_h6cml"]
 resource_name = "01_smoking_standing_loop"
 length = 0.833333
@@ -907,6 +910,9 @@ tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, 1.00002, 1.00001, 0.999998)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9c2bfce (working dialogue and state machines)
 [sub_resource type="Animation" id="Animation_jsmjx"]
 resource_name = "default"
 length = 0.0416667
@@ -1044,8 +1050,11 @@ tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, -0.0435659, -0.000108564, 0.00542187, 0.999036)
 
+<<<<<<< HEAD
 =======
 >>>>>>> 35b395a (lots of shit)
+=======
+>>>>>>> 9c2bfce (working dialogue and state machines)
 [sub_resource type="Animation" id="Animation_vk1ki"]
 resource_name = "idle_loop"
 length = 1.625
@@ -1323,6 +1332,9 @@ tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, 0.104762, 0.0232825, 0.0920987, 0.98995)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9c2bfce (working dialogue and state machines)
 [sub_resource type="Animation" id="Animation_24jrd"]
 resource_name = "sit_down"
 length = 1.25
@@ -1597,8 +1609,11 @@ tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, 0.104762, 0.0232825, 0.0920987, 0.98995)
 
+<<<<<<< HEAD
 =======
 >>>>>>> 35b395a (lots of shit)
+=======
+>>>>>>> 9c2bfce (working dialogue and state machines)
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mt42c"]
 _data = {
 "01_smoking_standing": SubResource("Animation_h6cml"),

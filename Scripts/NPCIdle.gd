@@ -53,6 +53,9 @@ func Physics_Update(delta):
 	if not npc.is_on_floor():
 		npc.velocity.y -= gravity * delta
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9c2bfce (working dialogue and state machines)
 	#dvar direction = player.global_position - npc.global_position
 
 #	if direction.length() < 7:

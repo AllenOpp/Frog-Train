@@ -19,7 +19,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 mouse_filter = 2
 =======
 >>>>>>> 35b395a (lots of shit)
+=======
+mouse_filter = 2
+>>>>>>> 9c2bfce (working dialogue and state machines)
 theme_override_styles/panel = SubResource("StyleBoxFlat_wcmi4")

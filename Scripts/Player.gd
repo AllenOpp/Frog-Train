@@ -53,6 +53,7 @@ func _unhandled_input(event):
 		var pauseInstance = preload(pauseMenu).instantiate()
 		add_child(pauseInstance)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -60,3 +61,5 @@ func interact():
 	print("touching ", ray.get_collider())
 	touch.emit(ray.get_collider())
 >>>>>>> 35b395a (lots of shit)
+=======
+>>>>>>> 9c2bfce (working dialogue and state machines)
