@@ -2,12 +2,17 @@ extends State
 class_name NPCIdle
 
 @export var npc: CharacterBody3D
+@onready var smoking = $"../../Body/AnimationPlayer"
+
 var idle_time : float
 var player: CharacterBody3D
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+
 func random_idle_time():
-	idle_time = randf_range(3,4)
+	idle_time = randf_range(3,9)
+	smoking.play("03_smoking_standing")
+	
 
 func Enter():
 	print("I went Idle")
@@ -28,5 +33,5 @@ func Physics_Update(delta):
 		npc.velocity.y -= gravity * delta
 	var direction = player.global_position - npc.global_position
 
-	if direction.length() < 7:
-		Transitioned.emit(self, "Follow")
+#	if direction.length() < 7:
+#		Transitioned.emit(self, "Follow")

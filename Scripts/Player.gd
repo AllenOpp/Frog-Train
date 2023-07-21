@@ -63,5 +63,5 @@ func _unhandled_input(event):
 
 
 func interact():
-	#print("touching ", ray.get_collider())
+	print("touching ", ray.get_collider())
 	touch.emit(ray.get_collider())

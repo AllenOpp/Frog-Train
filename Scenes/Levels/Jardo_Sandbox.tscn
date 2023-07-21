@@ -20,11 +20,15 @@
 [ext_resource type="PackedScene" uid="uid://boqmwk5ptaqpd" path="res://Scenes/Props/Misc/wine.tscn" id="9_r1kw0"]
 [ext_resource type="PackedScene" uid="uid://crgrqtcv6u1i8" path="res://Scenes/Props/Misc/ashtray_with_cigar.tscn" id="10_g2rkk"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 40e68bd (lamp 2, and organizing my sandbox scene)
 =======
 [ext_resource type="PackedScene" uid="uid://d1f7daqiohtcf" path="res://Scenes/Characters/Rusty_Charleston/cody_v_1.tscn" id="11_8iuvs"]
 >>>>>>> 3b8aebc (ciggies and cody)
+=======
+[ext_resource type="PackedScene" uid="uid://bhb4hx3jt88pi" path="res://Scenes/Characters/Rusty_Charleston/Rusty.tscn" id="11_85yb2"]
+>>>>>>> b519eb0 (lots of shit)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdm1j"]
 albedo_texture = ExtResource("1_w2tmw")
@@ -50,7 +54,7 @@ size = Vector3(0.457793, 1, 0.625361)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_c83dj")
 
-[node name="Player" parent="." instance=ExtResource("2_sav56")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_sav56")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 5)
 
 [node name="NPC" parent="." instance=ExtResource("3_rt3gp")]
@@ -103,9 +107,6 @@ transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 
 [node name="Pillar2" type="CSGBox3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 5, 0, 8.74228e-08, 0, -1, 3.35371, 2, -4.8351)
 use_collision = true
-
-[node name="cody_v1" parent="." instance=ExtResource("11_8iuvs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05644, -0.492633, 2.23675)
 
 [node name="Seats" type="Node3D" parent="."]
 
@@ -163,6 +164,7 @@ transform = Transform3D(0.411, 0, 0, 0, 0.411, 0, 0, 0, 0.411, 2.21902, 0.281609
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 2.14087, -0.0375142, -4.52724)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 40e68bd (lamp 2, and organizing my sandbox scene)
 =======
@@ -172,3 +174,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74673, -0.508893, 1.64593)
 >>>>>>> 3b8aebc (ciggies and cody)
 =======
 >>>>>>> 9d783a8 (textures and state)
+=======
+
+[node name="Rusty" parent="." instance=ExtResource("11_85yb2")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, -0.488876, 0)
+
+[connection signal="touch" from="Player" to="Rusty" method="_on_player_touch"]
+>>>>>>> b519eb0 (lots of shit)
