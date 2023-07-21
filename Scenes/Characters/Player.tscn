@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cd1dqi8ou55fr"]
+[gd_scene load_steps=7 format=3 uid="uid://cd1dqi8ou55fr"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_ds2bc"]
 [ext_resource type="AudioStream" uid="uid://cl8342e6kowhl" path="res://Audio/SFX/Train Ambience.ogg" id="2_6fyb8"]
+[ext_resource type="PackedScene" uid="uid://71nc2w1pxxlh" path="res://Scenes/Characters/HUD.tscn" id="3_8g0d2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m5ynv"]
 
@@ -32,3 +33,5 @@ stream = ExtResource("2_6fyb8")
 volume_db = -4.0
 max_db = -1.0
 autoplay = true
+
+[node name="Control" parent="." instance=ExtResource("3_8g0d2")]
