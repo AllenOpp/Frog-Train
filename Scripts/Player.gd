@@ -52,3 +52,11 @@ func _unhandled_input(event):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		var pauseInstance = preload(pauseMenu).instantiate()
 		add_child(pauseInstance)
+<<<<<<< HEAD
+=======
+
+
+func interact():
+	print("touching ", ray.get_collider())
+	touch.emit(ray.get_collider())
+>>>>>>> 35b395a (lots of shit)

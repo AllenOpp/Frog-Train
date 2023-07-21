@@ -1,5 +1,53 @@
+<<<<<<< HEAD
 ~ test_convo
 
 Rusty: Hi!
 
+=======
+~ this_is_a_node_title
+
+if have_met_blue_man == true
+	=> new_conversation
+else
+	set have_met_blue_man = true
+	BLUE MAN: [[Hey|Hello|Meowdy]], welcome! I'm nice unlike RED MAN.
+BLUE MAN: What item would you like?
+- Weapon
+	BLUE MAN: Nice!
+	set convo_value_blue = "1"
+- Protection
+	BLUE MAN: Good Choice!
+	set convo_value_blue = "2"
+- What?
+	set have_met_blue_man = false
+	 => this_is_a_node_title
+- Bye => END
+BLUE MAN: Have a nice day!
+=> END
+
+~ new_conversation
+if second_convo_blue == false
+	set second_convo_blue = true
+else
+	=> branch_1
+BLUE MAN: Hey again!
+if convo_value_blue != ""
+	BLUE MAN: Oh yeah, I remember...{{convo_value_blue}} 
+=> END
+
+~ branch_1
+if second_convo_blue == true and convo_value_blue == "1"
+	BLUE MAN: Andi likes Dota 2.
+else
+	=> branch_2
+=> END
+
+
+~ branch_2
+if second_convo_blue == true and convo_value_blue == "2"
+	BLUE MAN: Leon likes WoW.
+else
+	set have_met_blue_man = false
+	=> this_is_a_node_title
+>>>>>>> 35b395a (lots of shit)
 => END
