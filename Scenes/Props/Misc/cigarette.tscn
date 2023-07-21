@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://nwgiua0y5i6d"]
+
+[ext_resource type="PackedScene" uid="uid://cxpgjuhcpxbun" path="res://Scenes/Props/Misc/cigarette.glb" id="1_tfsg7"]
+
+[node name="cigarette" instance=ExtResource("1_tfsg7")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
